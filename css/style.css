@@ -1,0 +1,22 @@
+.name-and-picture{
+  display: flex;
+}
+#profile-picture{
+  max-height: 300px;
+}
+.nav-link{
+  padding: 5px;
+  border: 1px solid blue;
+}
+#about-me-picture{
+  max-height: 300px;
+}
+body{
+  font-family: 'Roboto', sans-serif;
+}
+h1{
+  border:1px solid green;
+  padding: 5px;
+  color: pink;
+  background-color: green;
+}
