@@ -1,0 +1,65 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1561\cocoasubrtf600
+{\fonttbl\f0\fmodern\fcharset0 Courier;}
+{\colortbl;\red255\green255\blue255;\red38\green37\blue36;\red255\green255\blue255;}
+{\*\expandedcolortbl;;\cssrgb\c19608\c19216\c18824;\cssrgb\c100000\c100000\c100000;}
+\margl1440\margr1440\vieww10800\viewh8400\viewkind0
+\deftab720
+\pard\pardeftab720\sl320\partightenfactor0
+
+\f0\fs28 \cf2 \cb3 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 Responsive Project\
+Student: Brendan Cummins\
+https://brendancummins.github.io\
+\
+Grade: 10/10\
+\
+This looks like a very solid start, but requires a number of fixes.\
+\
+Some things to adjust before submitting the final project...\
+\
+- When you add Google Fonts, import them in your stylesheet, not each html page. The first line of your css file will look like (I just randomly chose a font to demo):\
+\
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');\
+\
+- In your nav, using a span to group the links isn't really the best way to go. This is a list of links, so probably using a ul tag and li tags within the nav would be more appropriate. If you chose the span approach to see these display horizontally ... switch out for the aforementioned method and take a look at the examples repository. The '11-extras/nav-bar' details how to get a vertical (un)ordered list horizontal.\
+\
+- For the projects page, how about embedding those videos? On each YouTube page, if you click share, the first "circle" will give you code to put into your page to embed the video right on the page. If you do this, though, consider adjusting the size (where you see width/height in the code YouTube provides) so it fits your design.\
+\
+- On the resume page, it's not correct to apply an 'a' tag with an id inside your h2 tags. You can just apply the id to h2.\
+\
+Bad: <h2><a id="academics">Academics</a></h2>\
+Good: <h2 id="academics">Academics</h2>\
+\
+- On the resume page, inside main, each category should be wrapped in a section -- not article. An article tag would break down the section. Also, a header is unnecessary. For example:\
+\
+<section>\
+  <h2 id="academics">Academics</h2>\
+  <article>\
+    <h3>University of Miami</h3>\
+    ...\
+  </article>\
+</section>\
+\
+<section>\
+  <h2 id="experience">Experience</h2>\
+  ...\
+  <article>\
+    <h3>Finest Kicks</h3>\
+    ...\
+  </article>\
+\
+  <article>\
+    <h3>Sigma Alpha Mu Fraternity</h3>\
+  </article>\
+</section>\
+\
+(Side note: technically, the article tag in the 'Academics' section is optional. When there is only one "entry" it may not be necessary. If it helps to include it for the purpose of styling, however, keep it.)\
+\
+- Closing body tag on resume is missing.\
+\
+- When you write rules in CSS, order them so body is the first -- everything inherits from body. Then write your semantic tags that will apply throughout the page, regardless of where they appear in structure. Then add structural tags and any semantic tags within structural tags which overwrite a default. Then ids, then classes. This will help keep your code organized and help avoid conflicts.\
+\
+- Don't write code or filenames in uppercase. Give your filenames actual names -- not just "IMG_9379.jpg".\
+\
+- Both your images need to be edited. Photographs should not be saved as png (jpg only!) and both of them need to be smaller in file size (the Giants stadium photo is 3.6MB -- not acceptable). Get these smaller by editing them in Photoshop.\
+}
